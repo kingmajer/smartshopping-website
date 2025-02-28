@@ -1,6 +1,14 @@
-# Untitled
+# Smart Shopping Website
 
-A Pen created on CodePen.
+A modern e-commerce comparison platform with animated features.
 
-Original URL: [https://codepen.io/Kingdom-the-bold/pen/yyLVpwE](https://codepen.io/Kingdom-the-bold/pen/yyLVpwE).
+## Features
+- Animated welcome screen
+- Interactive navigation
+- Product comparison search
+- Social media integration
+- Responsive design
 
+## Installation
+1. Clone repository
+2. Open index.html in browser
