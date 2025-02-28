@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #2A2356;    /* Royal Purple */
+    --accent-color: #D4AF37;     /* Gold */
+    --secondary-color: #1A365F;  /* Navy Blue */
+    --text-color: #F0E6D2;       /* Cream */
+    --background-overlay: linear-gradient(45deg, rgba(42,35,86,0.9) 0%, rgba(26,54,95,0.9) 100%);
+    --transition-time: 0.4s;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: url('shopping-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+/* Welcome Animation */
+.welcome-screen {
+    background: var(--background-overlay);
+    animation: royalEntrance 1.5s ease-in-out forwards;
+}
+
+.welcome-text {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    background: linear-gradient(45deg, var(--accent-color) 30%, #FFFFFF 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(212,175,55,0.3);
+}
+
+/* Main Content */
+.main-content {
+    backdrop-filter: blur(10px);
+    background: rgba(42,35,86,0.15);
+}
+
+/* Search Bar */
+.search-container {
+    margin: 180px auto 50px;
+    max-width: 800px;
+}
+
+.search-bar {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+    transition: all var(--transition-time);
+}
+
+.search-bar:hover {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 30px rgba(212,175,55,0.2);
+}
+
+#search-input {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+#search-input::placeholder {
+    color: rgba(240,230,210,0.7);
+}
+
+/* Description */
+.description {
+    background: var(--background-overlay);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 40px rgba(212,175,55,0.1);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Contact Info */
+.contact-info {
+    background: rgba(42,35,86,0.8);
+    border-left: 4px solid var(--accent-color);
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    transition: color var(--transition-time);
+}
+
+.contact-info a:hover {
+    color: #FFFFFF;
+}
+
+/* QR Code Modal */
+.qr-modal {
+    background: var(--background-overlay);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 50px rgba(212,175,55,0.3);
+}
+
+/* Buttons */
+.menu-btn {
+    background: linear-gradient(45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: 1px solid var(--accent-color);
+    font-family: var(--font-heading);
+    letter-spacing: 0.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(212,175,55,0.3),
+        transparent
+    );
+    transition: var(--transition-time);
+}
+
+.menu-btn:hover::before {
+    left: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    background: var(--background-overlay);
+    border: 1px solid var(--accent-color);
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    position: relative;
+}
+
+.dropdown-content a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width var(--transition-time);
+}
+
+.dropdown-content a:hover::before {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes royalEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes goldGlow {
+    0%, 100% { text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+    50% { text-shadow: 0 0 30px rgba(212,175,55,0.6); }
+}
+
+/* Add to head section */
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
